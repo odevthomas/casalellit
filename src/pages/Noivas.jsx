@@ -8,7 +8,7 @@ import NoivaSection from '../components/Noivas/NoivaSection';
 import MarqueeSection from '../components/AcasaLellit/MarqueeSection';
 import WhatsApp from "../components/Buttons/FloatingWhatsApp";
 import VideoCTA from "../components/Noivas/VideoCTA";
-import ImageCTA from "../../ImageCTA";
+import ImageCTA from "../components/Noivas/ImageCTA";
 import DepoimentosSection from '../components/Noivas/DepoimentosSection'; // Importando corretamente o componente
 
 const Noivas = () => {

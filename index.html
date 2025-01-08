@@ -11,9 +11,7 @@
             <!-- Estilos Externos -->
             <link rel="stylesheet"
                   href="https://cdn.jsdelivr.net/npm/react-floating-whatsapp@latest/dist/index.css" />
-            <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
-                  rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap|Poppins:wght@300;400;500;600;700&display=swap"
                   rel="stylesheet">
 
             <!-- Favicon e Ícones -->
@@ -74,7 +72,8 @@
 
             <!-- Google Tag Manager -->
             <script async
-                    src="https://www.googletagmanager.com/gtm.js?id=GTM-NGBJKQN5"></script>
+                    src="https://www.googletagmanager.com/gtm.js?id=GTM-NGBJKQN5"
+                    defer></script>
 
             <!-- Favicon dinâmico -->
             <script>
@@ -89,32 +88,32 @@
 
             <!-- Schema.org (Google) -->
             <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Casa L’Ellit",
-        "url": "https://www.lellit.com.br/",
-        "logo": "https://www.lellit.com.br/casalellit.jpg",
-        "sameAs": [
-          "https://www.facebook.com/casalellit",
-          "https://twitter.com/casalellit",
-          "https://www.instagram.com/casalellit"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Maria Conceição Franco de Andrade, 209",
-          "addressLocality": "Nova Campinas",
-          "addressRegion": "SP",
-          "postalCode": "13092-190",
-          "addressCountry": "BR"
-        },
-        "telephone": "+55 19 3365-7011",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+55 19 99891-7724",
-          "contactType": "WhatsApp"
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Casa L’Ellit",
+            "url": "https://www.lellit.com.br/",
+            "logo": "https://www.lellit.com.br/casalellit.jpg",
+            "sameAs": [
+                "https://www.facebook.com/casalellit",
+                "https://twitter.com/casalellit",
+                "https://www.instagram.com/casalellit"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Maria Conceição Franco de Andrade, 209",
+                "addressLocality": "Nova Campinas",
+                "addressRegion": "SP",
+                "postalCode": "13092-190",
+                "addressCountry": "BR"
+            },
+            "telephone": "+55 19 3365-7011",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+55 19 99891-7724",
+                "contactType": "WhatsApp"
+            }
         }
-      }
     </script>
 
             <!-- Estilos para Transições e Efeitos -->
@@ -153,15 +152,17 @@
             </style>
 
             <!-- Google Analytics -->
-      <script async
-              src="https://www.googletagmanager.com/gtag/js?id=G-092NLM84P6"></script>
-      <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
+            <script async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-092NLM84P6"
+                    defer></script>
+            <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag() { dataLayer.push(arguments); }
+                  gtag('js', new Date());
 
-            gtag('config', 'G-092NLM84P6');
-      </script>
+                  gtag('config', 'G-092NLM84P6');
+            </script>
+
       </head>
 
       <body>
@@ -182,29 +183,28 @@
                   AOS.init();
             </script>
 
-           Automação do título da página -->
-      <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                  const keywords = [
-                        "Casa L’Ellit", "Salão de Beleza", "Estética", "Campinas", "Noivas",
-                        "Formatura", "Mechas", "Cuidados com a pele Campinas", "Transformação de Imagem",
-                        "Beleza Exclusiva Campinas", "Coloração", "Reflexo", "Mechas", "Coloração raiz",
-                        "Henna", "Tratamento", "Proteção Plex", "Hidratação", "Reconstrução",
-                        "Realinhamento Capilar", "Mega Hair", "Mega Hair Fita", "Mega Hair Queratina",
-                        "Corte", "Corte masculino", "Lavado", "Secagem", "Produção", "Maquiagem",
-                        "Escova", "Babyliss", "Penteado", "Nail Design", "Alongamento de Unhas",
-                        "Esmaltação em gel", "Manutenção de alongamento", "Pé & Mão", "Manicure", "Pedicure",
-                        "Esmaltação", "Francesinha", "Reflexologia", "Cílios", "Lash Lifting",
-                        "Extensão de Cílios", "Colocação de cílios postiços", "Sobrancelhas"
-                  ];
-                  let index = 0;
-                  setInterval(function () {
-                        document.title = keywords[index] + " - Campinas";
-                        index = (index + 1) % keywords.length;
-                  }, 3000); // Troca o título a cada 3 segundos
-            });
-      </script>
-
+            <!-- Automação do título da página -->
+            <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                        const keywords = [
+                              "Casa L’Ellit", "Salão de Beleza", "Estética", "Campinas", "Noivas",
+                              "Formatura", "Mechas", "Cuidados com a pele Campinas", "Transformação de Imagem",
+                              "Beleza Exclusiva Campinas", "Coloração", "Reflexo", "Mechas", "Coloração raiz",
+                              "Henna", "Tratamento", "Proteção Plex", "Hidratação", "Reconstrução",
+                              "Realinhamento Capilar", "Mega Hair", "Mega Hair Fita", "Mega Hair Queratina",
+                              "Corte", "Corte masculino", "Lavado", "Secagem", "Produção", "Maquiagem",
+                              "Escova", "Babyliss", "Penteado", "Nail Design", "Alongamento de Unhas",
+                              "Esmaltação em gel", "Manutenção de alongamento", "Pé & Mão", "Manicure", "Pedicure",
+                              "Esmaltação", "Francesinha", "Reflexologia", "Cílios", "Lash Lifting",
+                              "Extensão de Cílios", "Colocação de cílios postiços", "Sobrancelhas"
+                        ];
+                        let index = 0;
+                        setInterval(function () {
+                              document.title = keywords[index] + " - Campinas";
+                              index = (index + 1) % keywords.length;
+                        }, 3000); // Troca o título a cada 3 segundos
+                  });
+            </script>
 
             <script src="bundle.js"></script>
 
