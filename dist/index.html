@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge" />
+
+    <!-- Estilos Externos -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/react-floating-whatsapp@latest/dist/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Favicon e Ícones -->
+    <link id="favicon"
+          rel="icon"
+          type="image/jpeg"
+          href="/casalellit.jpg" />
+    <link rel="apple-touch-icon"
+          href="/casalellit.jpg" />
+
+    <!-- Estilos internos -->
+    <link rel="stylesheet"
+          href="/src/styles/App.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+          rel="stylesheet">
+
+    <title>Casa L’Ellit - Transformando Beleza em Arte no Cambuci, São Paulo</title>
+
+    <!-- Meta Tags e SEO -->
+    <meta name="description"
+          content="Descubra a Casa L’Ellit, um salão de beleza único localizado no Cambuci, São Paulo, especializado em noivas, formaturas, mechas, cuidados com a pele e cabelo. Realce sua beleza natural com nosso atendimento personalizado." />
+    <meta name="keywords"
+          content="salão de beleza, estética, Cambuci, São Paulo, Casa L’Ellit, noivas, formatura, mechas, cuidados com a pele, cabelo, fax mechas, transformação de imagem, beleza personalizada, maquiagem, penteado, tratamentos capilares, coloração de cabelo, hidratação, design de sobrancelhas, cuidados com a pele Cambuci, beleza São Paulo" />
+    <meta name="author"
+          content="Casa L’Ellit" />
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="Casa L’Ellit - Seu Refúgio de Beleza no Cambuci, SP" />
+    <meta property="og:description"
+          content="Explore nossos serviços exclusivos de beleza e transforme seu visual com a Casa L’Ellit. Atendimento especializado para noivas, formaturas, mechas e tratamentos de beleza no Cambuci." />
+    <meta property="og:image"
+          content="https://www.lellit.com.br/casalellit.jpg" />
+    <meta property="og:url"
+          content="https://www.lellit.com.br/" />
+    <meta property="og:type"
+          content="website" />
+    <meta property="og:locale"
+          content="pt_BR" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card"
+          content="summary_large_image" />
+    <meta name="twitter:title"
+          content="Casa L’Ellit - Cambuci, SP" />
+    <meta name="twitter:description"
+          content="Redefina sua beleza com serviços personalizados como noivas, formatura e mechas na Casa L’Ellit, em Cambuci, SP." />
+    <meta name="twitter:image"
+          content="https://www.lellit.com.br/casalellit.jpg" />
+    <meta name="robots"
+          content="index, follow" />
+    <meta name="theme-color"
+          content="#7e6657" />
+    <link rel="canonical"
+          href="https://www.lellit.com.br/" />
+
+    <!-- Google Tag Manager -->
+    <script async
+            src="https://www.googletagmanager.com/gtm.js?id=GTM-NGBJKQN5"></script>
+
+    <!-- Favicon dinâmico -->
+    <script>
+      function updateFavicon() {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const favicon = document.getElementById('favicon');
+        favicon.href = darkModeMediaQuery.matches ? '/favicon-branco.svg' : '/casalellit.jpg';
+      }
+      updateFavicon();
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+    </script>
+
+    <!-- Schema.org (Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Casa L’Ellit",
+        "url": "https://www.lellit.com.br/",
+        "logo": "https://www.lellit.com.br/casalellit.jpg",
+        "sameAs": [
+          "https://www.facebook.com/casalellit",
+          "https://twitter.com/casalellit",
+          "https://www.instagram.com/casalellit"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Maria Conceição Franco de Andrade, 209",
+          "addressLocality": "Cambuci",
+          "addressRegion": "SP",
+          "postalCode": "13092-190",
+          "addressCountry": "BR"
+        },
+        "telephone": "+55 19 3365-7011",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55 19 99891-7724",
+          "contactType": "WhatsApp"
+        }
+      }
+    </script>
+
+    <!-- Estilos para Transições e Efeitos -->
+    <style>
+      * {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .fade-in.loaded {
+        opacity: 1;
+      }
+
+      .btn {
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: var(--secondary-color);
+        color: var(--white);
+        transform: translateY(-3px);
+      }
+
+      .lazyload {
+        filter: blur(20px);
+        transition: filter 0.3s ease-out;
+      }
+
+      .lazyload.loaded {
+        filter: blur(0);
+      }
+    </style>
+
+    <!-- Google Analytics -->
+    <script async
+            src="https://www.googletagmanager.com/gtag/js?id=G-092NLM84P6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-092NLM84P6');
+    </script>
+    <script type="module" crossorigin src="/assets/index-DVFK3xjk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-iCW1TnJ1.css">
+  </head>
+
+  <body>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGBJKQN5"
+              height="0"
+              width="0"
+              style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <div id="root"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Automação do título da página -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const keywords = ["Casa L’Ellit", "Salão de Beleza", "Estética", "Cambuci", "Noivas", "Formatura", "Mechas", "Cuidados com a pele Cambuci", "Transformação de Imagem"];
+        let index = 0;
+        setInterval(function () {
+          document.title = keywords[index] + " - Casa L’Ellit";
+          index = (index + 1) % keywords.length;
+        }, 3000); // Troca o título a cada 3 segundos
+      });
+    </script>
+
+      <script src="bundle.js"></script>
+
+  </body>
+
+</html>

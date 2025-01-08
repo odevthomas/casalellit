@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+KR:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ultra&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #f5f0e1; /* Um tom mais claro e suave */
+  --secondary-color: #8d6e63; /* Um marrom mais quente e convidativo */
+  --new-color: #c1a192; /* Nova cor adicionada */
+  --black: #1c1c1c; /* Um preto mais suave */
+  --white: #ffffff; /* Branco puro para contraste */
+  --gray-light: #e0d7d0; /* Um cinza claro mais suave */
+  --gray-dark: #5b3e36; /* Um cinza escuro com mais profundidade */
+  --accent-color: #f2e6d5; /* Um tom de destaque mais suave */
+  --background-light: #f5f0e1; /* Igual ao primary, para uniformidade */
+  --background-dark: #212121; /* Um preto mais suave para o fundo escuro */
+  --text-light: #a86d60; /* Um tom claro e suave de marrom */
+  --text-dark: #222222; /* Um cinza muito escuro para o texto */
+  --border-radius: 12px; /* Um raio de borda levemente maior */
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color:#eee6dc;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  overflow-y: scroll;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+a:hover {
+  color: var(--new-color); /* Mudança ao passar o mouse */
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--black);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: 2px solid var(--secondary-color);
+  padding: 1em 1.5em;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+.btn:hover {
+  color: var(--white);
+  background-color: var(--secondary-color);
+}
+
+p {
+  color: var(--gray-light);
+  font-size: 1.125rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Resto do código permanece inalterado */
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 3px solid var(--background-light);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
+
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.animate-modal {
+  animation: modal-enter 0.3s ease-out forwards;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.ReactModal__Content {
+  max-width: 400px; /* Reduz o tamanho do modal */
+  width: 100%;
+  margin: auto; /* Centraliza o modal */
+  padding: 2rem; /* Ajusta o espaçamento interno */
+  background-color: var(--primary-color); /* Cor de fundo */
+  color: var(--text-dark); /* Cor do texto */
+  border-radius: 1rem; /* Arredonda as bordas */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transform: scale(1);
+  transition: transform 0.3s ease; /* Transição suave */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModal__Content:focus {
+  outline: none;
+}
+
+/* Botões */
+.modal-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-button:disabled {
+  background-color: var(--gray-light);
+  cursor: not-allowed;
+}
+
+.modal-button:hover:not(:disabled) {
+  background-color: var(--secondary-color-dark);
+}
+
+/* Estilo para o botão de fechar */
+.ReactModal__Close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.ReactModal__Close:hover {
+  color: var(--secondary-color-dark);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  background-color: #7e6657;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #6a5546;
+}
+
+.close-modal {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+@keyframes marquee-smooth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee-smooth {
+  animation: marquee-smooth 50s linear infinite;
+}
+
+/* Tailwind CSS */
+.text-base {
+  font-size: 1rem; /* 16px */
+}
+
+@media (min-width: 640px) { /* sm */
+  .text-base {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+@media (min-width: 768px) { /* md */
+  .text-base {
+    font-size: 1.25rem; /* 20px */
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .text-base {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+@media (min-width: 1280px) { /* xl */
+  .text-base {
+    font-size: 1.75rem; /* 28px */
+  }
+}
+
+@media (min-width: 1536px) { /* 2xl */
+  .text-base {
+    font-size: 2rem; /* 32px */
+  }
+}
+/* Estilos gerais para vídeos */
+video {
+  width: 100%; /* Faz o vídeo ocupar toda a largura do contêiner */
+  height: auto; /* Mantém a proporção do vídeo */
+  max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do seu contêiner */
+  display: block; /* Remove espaços em branco abaixo do vídeo */
+}
+
+/* Estilos para contêiner do vídeo */
+.video-container {
+  position: relative; /* Permite posicionar o botão de play ou outros elementos */
+  overflow: hidden; /* Garante que nada saia do contêiner */
+  padding-top: 56.25%; /* Mantém uma proporção de 16:9 (altura / largura) */
+}
+
+/* Estilo para centralizar o vídeo */
+.video-container video {
+  position: absolute; /* Posiciona o vídeo dentro do contêiner */
+  top: 0;
+  left: 0;
+  width: 100%; /* Faz o vídeo ocupar toda a largura do contêiner */
+  height: 100%; /* Faz o vídeo ocupar toda a altura do contêiner */
+}
+
+/* Media query para ajustar em telas menores */
+@media (max-width: 768px) {
+  video {
+    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura do dispositivo */
+  }
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+video:hover {
+  transform: scale(1.05);
+}
+
+video::-webkit-media-controls {
+  display: none; /* Esconde os controles nativos do vídeo (se necessário) */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
