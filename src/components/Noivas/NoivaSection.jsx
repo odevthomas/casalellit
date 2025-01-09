@@ -1,87 +1,89 @@
-"use client"; // Indica que este módulo deve ser tratado como cliente
+import React, { useRef } from "react"; // Importando React
+import Slider from "react-slick"; // Importando o Slider
+import "slick-carousel/slick/slick.css"; // Estilos do Slider
+import "slick-carousel/slick/slick-theme.css"; // Temas do Slider
 
-import React, { memo, useRef } from "react";
-import { motion } from "framer-motion";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-// Dados das imagens
-const images = [
-  { src: '/SlideNoivas/slide1.webp', alt: 'Imagem 1', text: 'Capturando a beleza que brilha em cada sorriso.' },
-  { src: '/SlideNoivas/slide2.webp', alt: 'Imagem 2', text: 'Cada clique conta a história do seu amor.' },
-  { src: '/SlideNoivas/slide3.webp', alt: 'Imagem 3', text: 'Momentos preciosos que eternizam sua felicidade.' },
-  { src: '/SlideNoivas/slide4.webp', alt: 'Imagem 4', text: 'A noiva radiante, cercada por amor e alegria.' },
-  { src: '/SlideNoivas/slide5.webp', alt: 'Imagem 5', text: 'A magia do amor refletida em cada imagem.' },
-];
-
-// Configurações do Slider
-const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 800,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 8000,
-  arrows: false, // Remove as setas padrão
-  pauseOnHover: true, // Pausa o slide quando o usuário passa o mouse sobre o slider
-};
-
+// Main ImageCarousel Component
 const ImageCarousel = () => {
-  const sliderRef = useRef(null); // Referência ao Slider para controle das setas
+  const sliderRef = useRef(null); // Referência para o slider
 
-  const handleImageError = (event) => {
-    event.target.src = "/SlideHome/noiva-cabelo-maquiagem-casa-lellit.webp"; // Imagem de fallback
+  const images = [
+    {
+      src: "/SlideNoivas/slide1.webp",
+      alt: "Noiva com cabelo e maquiagem impecáveis na Casa L’Ellit em Campinas",
+      text: "A beleza radiante de cada noiva em seu grande dia.",
+    },
+    {
+      src: "/SlideNoivas/slide2.webp",
+      alt: "Noiva posando na Casa L’Ellit em Campinas com look elegante para casamento",
+      text: "Elegância sem igual, cada detalhe refletindo a perfeição.",
+    },
+    {
+      src: "/SlideNoivas/slide3.webp",
+      alt: "Preparação de noiva com maquiagem e penteado na Casa L’Ellit em Campinas",
+      text: "Preparação que transforma sonhos em realidade.",
+    },
+    {
+      src: "/SlideNoivas/slide4.webp",
+      alt: "Detalhes do penteado e maquiagem de noiva na Casa L’Ellit, especializada em casamentos em Campinas",
+      text: "Perfeição em cada fio de cabelo, em cada detalhe.",
+    },
+    {
+      src: "/SlideNoivas/slide5.webp",
+      alt: "Detalhes do penteado e maquiagem de noiva na Casa L’Ellit, especializada em casamentos em Campinas",
+      text: "A noiva que brilha em cada momento, radiante e única.",
+    },
+  ];
+
+  // Configurações do slider
+  const settings = {
+    dots: true,
+    infinite: false, // Desativando loop infinito
+    speed: 1200, // Aumentando a transição de slides
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false, // Desativando autoplay
+    arrows: true, // Ativando setas de navegação
+    fade: true,
+    cssEase: "ease-in-out",
   };
 
   return (
-    <section aria-label="Galeria Casa L’Ellit" className="overflow-hidden w-full h-full m-0 p-0">
-      <motion.div
-        className="relative w-full h-full"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, type: "spring", stiffness: 150 }}
-      >
-        <Slider ref={sliderRef} {...sliderSettings}>
-          {images.map((image, index) => (
-            <div key={index} className="relative w-full h-full">
-              <motion.img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105 border-none" // Remove borda
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                onError={handleImageError}
-              />
-              <div className="absolute inset-0 flex items-center justify-center text-center text-gray-100 bg-gray-900 bg-opacity-60 transition-opacity duration-500 ease-in-out opacity-0 hover:opacity-100">
-                <span className="text-lg sm:text-2xl font-bold">{image.text}</span>
-              </div>
+    <section aria-label="Galeria Casa L’Ellit" className="relative w-full h-screen">
+      <Slider {...settings} ref={sliderRef}>
+        {images.map((image, index) => (
+          <div key={index} className="relative w-full h-screen flex items-center justify-center">
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
+            />
+            <div className="absolute inset-0 flex items-center justify-center text-center bg-black bg-opacity-30 text-white px-4 py-2 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <p className="text-lg sm:text-2xl font-light">{image.text}</p>
             </div>
-          ))}
-        </Slider>
+          </div>
+        ))}
+      </Slider>
 
-        {/* Custom Navigation Arrows */}
-        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 flex justify-between w-full px-4">
-          <button
-            className="text-[#ffffffc9] text-xl transition-transform transform hover:scale-110 hover:border-[#ffffff58] hover:text-[#b7b7b7e4] focus:outline-none focus:ring-white focus:ring-opacity-50 p-3"
-            onClick={() => sliderRef.current.slickPrev()}
-            aria-label="Ir para o slide anterior"
-          >
-            &#10094; {/* Left arrow */}
-          </button>
-          <button
-            className="text-[#ffffffc9] text-xl transition-transform transform hover:scale-110 hover:border-[#ffffff58] hover:text-[#ffffffe4] focus:outline-none focus:ring-white focus:ring-opacity-50 p-3"
-            onClick={() => sliderRef.current.slickNext()}
-            aria-label="Ir para o próximo slide"
-          >
-            &#10095; {/* Right arrow */}
-          </button>
-        </div>
-      </motion.div>
+      {/* Custom Navigation Arrows */}
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 flex justify-between w-full px-4">
+        <button
+          className="text-[#ffffffc9] text-xl transition-transform transform hover:scale-110 hover:border-[#ffffff58] hover:text-[#b7b7b7e4] focus:outline-none focus:ring-white focus:ring-opacity-50 p-3"
+          onClick={() => sliderRef.current.slickPrev()}
+          aria-label="Ir para o slide anterior"
+        >
+          &#10094; {/* Left arrow */}
+        </button>
+        <button
+          className="text-[#ffffffc9] text-xl transition-transform transform hover:scale-110 hover:border-[#ffffff58] hover:text-[#ffffffe4] focus:outline-none focus:ring-white focus:ring-opacity-50 p-3"
+          onClick={() => sliderRef.current.slickNext()}
+          aria-label="Ir para o próximo slide"
+        >
+          &#10095; {/* Right arrow */}
+        </button>
+      </div>
     </section>
   );
 };
 
-export default memo(ImageCarousel);
+export default ImageCarousel;

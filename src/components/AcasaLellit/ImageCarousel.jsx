@@ -34,7 +34,7 @@ const ImageCarousel = () => {
   const settings = {
     dots: true,
     infinite: false, // Desativando loop infinito
-    speed: 800,
+    speed: 1200, // Aumentando a transição de slides
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false, // Desativando autoplay
@@ -51,7 +51,7 @@ const ImageCarousel = () => {
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
             />
             <div className="absolute inset-0 flex items-center justify-center text-center bg-black bg-opacity-30 text-white px-4 py-2 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
               <p className="text-lg sm:text-2xl font-light">{image.text}</p>
