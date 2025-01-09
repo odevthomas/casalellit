@@ -68,18 +68,17 @@ const TabelaDeServicos = () => {
   return (
     <section id="tabela-servicos" className="py-40 bg-gradient-to-r from-[#f6eee3] to-[#f6eee3] text-[#4a4a4a]">
       <div className="max-w-7xl mx-auto px-6 text-center">
-      <h3 className="text-5xl font-serif text-[#6d3406] mb-12 tracking-widest">
-   Serviços Exclusivos Para Realçar Sua Beleza
-</h3>
-<p className="text-lg font-custom text-black mb-6 sm:text-xl lg:text-2xl">
-  Explore nossos tratamentos especializados e descubra como cada serviço pode realçar sua confiança e bem-estar de forma única e personalizada.
-</p>
-
+        <h3 className="text-5xl font-serif text-[#6d3406] mb-12 tracking-widest">
+          Serviços Exclusivos Para Realçar Sua Beleza
+        </h3>
+        <p className="text-lg font-custom text-black mb-6 sm:text-xl lg:text-2xl">
+          Explore nossos tratamentos especializados e descubra como cada serviço pode realçar sua confiança e bem-estar de forma única e personalizada.
+        </p>
 
         <Slider {...settings}>
           {Object.entries(servicos).map(([categoria, lista]) => (
             <div key={categoria} className="p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 ease-in-out mx-3 my-4 bg-gradient-to-r from-[#f2ebd8] to-[#f7f0e9]">
-              <h3 className="text-3xl font-semibold text-[#6d3406]  border-b-2 border-[#6d3406] pb-2">
+              <h3 className="text-3xl font-semibold text-[#6d3406] border-b-2 border-[#6d3406] pb-2">
                 {titulos[categoria]}
               </h3>
               <ul className="list-none ml-6 space-y-3 text-lg font-medium text-[#4a4a4a]">
@@ -95,6 +94,16 @@ const TabelaDeServicos = () => {
             </div>
           ))}
         </Slider>
+        
+        {/* Botão para agendar ou saber mais */}
+        <div className="mt-10">
+          <a 
+            href="/agendar" // Altere o link conforme necessário
+            className="inline-block px-8 py-3 bg-[#6d3406] text-white font-semibold rounded-lg shadow-md hover:bg-[#5a2e05] transition duration-300"
+          >
+            Agende Seu Serviço
+          </a>
+        </div>
       </div>
     </section>
   );

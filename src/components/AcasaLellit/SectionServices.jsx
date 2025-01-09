@@ -15,7 +15,7 @@ const servicesData = [
       "/Servicos/cortes/1corte-cabelo-elegante-campinas.webp",
       "/Servicos/cortes/2corte-cabelo-elegante-campinas.webp",
     ],
-    whatsappMessage: "Oi, vim pelo site e quero agendar um corte de cabelo ou penteado personalizado.",
+    whatsappMessage: "Oi, vim pelo site e quero agendar um corte de cabelo .",
   },
   {
     title: "Noivas",
@@ -25,7 +25,7 @@ const servicesData = [
       "/Servicos/ServicoNoivas/noiva2-preparacao-noiva-casamento-casa-lellit.webp",
       "/Servicos/ServicoNoivas/noiva3-preparacao-noiva-casamento-casa-lellit.webp",
     ],
-    whatsappMessage: "Oi, vim pelo site e quero agendar meu penteado e maquiagem de noiva.",
+    whatsappMessage: "Oi, vim pelo site e quero agendar meu penteado.",
   },
   {
     title: "Maquiagens",
@@ -61,7 +61,7 @@ const servicesData = [
       "/Servicos/unhas/manicure1-pedicure-noiva-casa-lellit-campinas.webp",
       "/Servicos/unhas/manicure2-pedicure-noiva-casa-lellit-campinas.webp",
     ],
-    whatsappMessage: "Oi, vim pelo site e quero agendar minha manicure ou alongamento de unhas.",
+    whatsappMessage: "Oi, vim pelo site e quero agendar minha manicure.",
   },
 ];
 

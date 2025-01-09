@@ -1,6 +1,8 @@
 import React from "react";
 
 const HistoriaETradicao = () => {
+
+  
   return (
     <section
       className="relative py-20 w-full h-screen bg-cover bg-center bg-fixed flex items-center"
@@ -30,13 +32,12 @@ const HistoriaETradicao = () => {
           Nosso espaço é sofisticado, acolhedor e pensado para que você se sinta verdadeiramente em casa. Contamos com uma equipe apaixonada e produtos de altíssima qualidade para garantir resultados incríveis e que respeitam a sua essência. Na Casa Lellit, você é o centro de tudo.
         </p>
 
-        {/* Botão de ação */}
-        <button
-          aria-label="Clique para agendar serviços de beleza"
-          className="bg-[#7b5643] text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-[#211006] hover:shadow-2xl"
-        >
-          Venha viver uma experiência de beleza que transforma por dentro e por fora!
-        </button>
+        <a
+                href="https://api.whatsapp.com/send/?phone=5519998917724&text=Olá!+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+a+Casa+L%27Ellit!&type=phone_number&app_absent=0"
+                className="bg-[#5f3717] text-white hover:bg-[#211006] font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-colors duration-300 text-sm sm:text-base"
+            >
+                Saber mais sobre a Casa L'Ellit!
+            </a>
       </div>
     </section>
   );
