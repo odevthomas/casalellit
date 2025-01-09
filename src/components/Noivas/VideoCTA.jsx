@@ -41,7 +41,7 @@ const ImageCTA = () => {
         className="absolute inset-0 w-full h-full object-cover z-0"
         aria-hidden="true"
       >
-        <source src="/public/videos/video novo cortado.mp4" type="video/mp4" />
+        <source src="/videos/video_novo_cortado.mp4" type="video/mp4" />
         Seu navegador não suporta vídeos HTML5.
       </video>
 

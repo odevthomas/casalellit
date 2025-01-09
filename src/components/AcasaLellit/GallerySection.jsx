@@ -71,10 +71,6 @@ const GallerySection = () => {
                         src={image} // Imagem carregada imediatamente
                         alt={`Imagem de noiva ${noiva.name}, foto ${idx + 1}`}
                         className="w-full max-h-[550px] object-cover rounded-t-lg"
-                        onError={(event) => {
-                          event.target.src = "/imagens-fallback/sem-imagem.webp"; // Caminho para a imagem de fallback
-                          event.target.alt = "Imagem de noiva em processo de carregamento. Tente novamente em breve.";
-                        }}
                       />
                     </div>
                   ))}
