@@ -1,4 +1,4 @@
-import React from "react"; // Importando React
+import React, { useRef } from "react"; // Importando React e useRef
 import Slider from "react-slick"; // Importando o Slider
 import "slick-carousel/slick/slick.css"; // Estilos do Slider
 import "slick-carousel/slick/slick-theme.css"; // Temas do Slider
@@ -39,6 +39,9 @@ const noivasData = [
 ];
 
 const GallerySection = () => {
+  // Inicializando um array de referências para cada slider
+  const sliderRefs = useRef([]);
+
   // Configurações do slider
   const sliderSettings = {
     infinite: false, // Desativando loop infinito
@@ -64,7 +67,10 @@ const GallerySection = () => {
             <div key={noivaIndex} className="relative overflow-hidden group bg-[#ffffff58cc] shadow-xl hover:shadow-2xl rounded-lg transition-all duration-800 ease-in-out">
               <div className="relative overflow-hidden rounded-t-lg">
                 {/* Carrossel específico para cada noiva */}
-                <Slider {...sliderSettings}>
+                <Slider
+                  ref={(el) => (sliderRefs.current[noivaIndex] = el)} // Atribuindo uma referência única para cada slider
+                  {...sliderSettings}
+                >
                   {noiva.images.map((image, idx) => (
                     <div key={idx} className="w-full h-auto flex justify-center items-center">
                       <img
@@ -75,6 +81,23 @@ const GallerySection = () => {
                     </div>
                   ))}
                 </Slider>
+                {/* Custom Navigation Arrows */}
+                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 flex justify-between w-full px-4">
+                  <button
+                    className="text-[#ffffffc9] text-xl transition-transform transform hover:scale-110 hover:border-[#ffffff58] hover:text-[#b7b7b7e4] focus:outline-none focus:ring-white focus:ring-opacity-50 p-3"
+                    onClick={() => sliderRefs.current[noivaIndex].slickPrev()} // Controlando o slider específico
+                    aria-label="Ir para o slide anterior"
+                  >
+                    &#10094; {/* Left arrow */}
+                  </button>
+                  <button
+                    className="text-[#ffffffc9] text-xl transition-transform transform hover:scale-110 hover:border-[#ffffff58] hover:text-[#ffffffe4] focus:outline-none focus:ring-white focus:ring-opacity-50 p-3"
+                    onClick={() => sliderRefs.current[noivaIndex].slickNext()} // Controlando o slider específico
+                    aria-label="Ir para o próximo slide"
+                  >
+                    &#10095; {/* Right arrow */}
+                  </button>
+                </div>
               </div>
               <div className="p-6 text-center">
                 <p className="text-lg lg:text-xl font-medium text-[#000000c3] leading-relaxed">

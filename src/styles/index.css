@@ -22,7 +22,7 @@
 
 body {
   font-family: 'Times New Roman', Times, serif;
-  background-color:#eee6dc;
+  background-color: #eee6dc;
   color: var(--text-dark);
   margin: 0;
   padding: 0;
@@ -54,9 +54,6 @@ h3 {
 html {
   scroll-behavior: smooth;
 }
-
-
-
 
 .btn {
   font-size: 17px;
@@ -102,11 +99,6 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: var(--secondary-color);
 }
 
-
-body::-webkit-scrollbar-thumb:hover {
-  background-color: var(--secondary-color);
-}
-
 section {
   position: relative;
   width: 100%;
@@ -127,7 +119,6 @@ section {
   100% { transform: rotate(360deg); }
 }
 
-
 .animate-modal {
   animation: modal-enter 0.3s ease-out forwards;
 }
@@ -135,7 +126,6 @@ section {
 .flex {
   display: flex;
 }
-
 
 .ReactModal__Content {
   max-width: 400px; /* Reduz o tamanho do modal */
@@ -195,6 +185,7 @@ section {
 .ReactModal__Close:hover {
   color: var(--secondary-color-dark);
 }
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -287,6 +278,7 @@ section {
     font-size: 2rem; /* 32px */
   }
 }
+
 /* Estilos gerais para vídeos */
 video {
   width: 100%; /* Faz o vídeo ocupar toda a largura do contêiner */
@@ -351,6 +343,7 @@ video::-webkit-media-controls {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
 .animate-spin {
   animation: spin 1s linear infinite;
 }
@@ -363,4 +356,3 @@ video::-webkit-media-controls {
     transform: rotate(360deg);
   }
 }
-

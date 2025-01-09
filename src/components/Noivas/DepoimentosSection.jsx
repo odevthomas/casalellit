@@ -74,21 +74,22 @@ const DepoimentosSection = () => {
     <section id="depoimentos" className="py-28 bg-[#f6eee3bb] text-white" aria-labelledby="depoimentos-section">
       <div className="max-w-6xl mx-auto px-4 xl:px-0">
         <header className="text-center mb-12">
-          <motion.h2
+          <motion.h4
             className="text-5xl font-serif text-[#6d3406] mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Cada história compartilhada por nossas noivas é um testemunho do amor, cuidado e dedicação que colocamos em cada momento.
-          </motion.h2>
+            Confira o que elas têm a dizer sobre o dia mais especial da vida!
+            
+          </motion.h4>
           <motion.p
             className="text-lg text-[#000000] max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Confira o que elas têm a dizer sobre o dia mais especial da vida!
+            Cada história compartilhada por nossas noivas é um testemunho do amor, cuidado e dedicação que colocamos em cada momento.
           </motion.p>
         </header>
 

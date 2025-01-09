@@ -85,7 +85,7 @@ const DepoimentosSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Cada história compartilhada por nossas noivas é um testemunho do amor, cuidado e dedicação que colocamos em cada momento.
+O Que Nossos Clientes Dizem           
           </motion.h2>
           <motion.p
             className="text-lg sm:text-base text-[#000000] max-w-3xl mx-auto"
@@ -93,7 +93,7 @@ const DepoimentosSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Confira o que elas têm a dizer sobre o dia mais especial da vida!
+             Cada história compartilhada por nossas noivas é um testemunho do amor, cuidado e dedicação que colocamos em cada momento.
           </motion.p>
         </header>
 
