@@ -68,9 +68,9 @@ const TabelaDeServicos = () => {
   return (
     <section id="tabela-servicos" className="py-40 bg-gradient-to-r from-[#f6eee3] to-[#f6eee3] text-[#4a4a4a]">
       <div className="max-w-7xl mx-auto px-6 text-center">
-      <h2 className="text-5xl font-serif text-[#6d3406] mb-12 tracking-widest">
-  Transforme Seu Visual - Serviços Exclusivos Para Realçar Sua Beleza
-</h2>
+      <h3 className="text-5xl font-serif text-[#6d3406] mb-12 tracking-widest">
+   Serviços Exclusivos Para Realçar Sua Beleza
+</h3>
 <p className="text-lg font-custom text-black mb-6 sm:text-xl lg:text-2xl">
   Explore nossos tratamentos especializados e descubra como cada serviço pode realçar sua confiança e bem-estar de forma única e personalizada.
 </p>

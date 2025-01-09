@@ -26,9 +26,9 @@ const CTA = () => {
       
       <div className="max-w-7xl mx-auto text-center relative z-10 px-6 sm:px-12">
         {/* Título principal */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading text-white mb-6 drop-shadow-lg">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading text-white mb-6 drop-shadow-lg">
           Descubra um espaço onde beleza e sofisticação se encontram
-        </h1>
+        </h2>
 
         {/* Descrição */}
         <p className="text-lg sm:text-xl lg:text-2xl font-custom text-white mb-6 sm:mb-8 drop-shadow-md">

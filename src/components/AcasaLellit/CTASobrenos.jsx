@@ -17,9 +17,9 @@ const HistoriaETradicao = () => {
       {/* Conteúdo sobre a história */}
       <div className="max-w-6xl mx-auto text-center relative z-10 px-6 md:px-12">
         {/* Título */}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading text-white mb-6 sm:mb-8 tracking-tight leading-tight">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading text-white mb-6 sm:mb-8 tracking-tight leading-tight">
           Bem-vindo à Casa Lellit, onde cada detalhe é pensado para você!
-        </h1>
+        </h2>
 
         {/* Descrição */}
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-custom text-white mb-6 leading-relaxed sm:leading-loose md:leading-normal lg:leading-relaxed">
