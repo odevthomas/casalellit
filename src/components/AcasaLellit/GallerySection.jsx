@@ -1,4 +1,4 @@
-import React, { useRef } from "react"; // Importando React e useRef
+import React from "react"; // Importando React
 import Slider from "react-slick"; // Importando o Slider
 import "slick-carousel/slick/slick.css"; // Estilos do Slider
 import "slick-carousel/slick/slick-theme.css"; // Temas do Slider
@@ -39,14 +39,6 @@ const noivasData = [
 ];
 
 const GallerySection = () => {
-  // Criando um array de referências para os sliders
-  const sliderRefs = useRef([]);
-
-  // Função para garantir que o array de referências tenha um comprimento adequado
-  const setSliderRef = (index, slider) => {
-    sliderRefs.current[index] = slider;
-  };
-
   // Configurações do slider
   const sliderSettings = {
     infinite: false, // Desativando loop infinito
@@ -54,7 +46,7 @@ const GallerySection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false, // Desativando autoplay
-    arrows: false, // Desativando as setas padrão, pois vamos usar setas personalizadas
+    arrows: false, // Desativando as setas padrão
   };
 
   return (
@@ -64,7 +56,7 @@ const GallerySection = () => {
           Cuidando de Cada Detalhe para o Seu Grande Dia
         </h2>
         <p className="mb-10 text-lg font-medium text-[#000000c3]">
-          Inspire-se nas noivas que confiaram em nosso cuidado para o dia mais especial de suas vidas. Cada detalhe pensado para refletir sua beleza e tornar seu momento único. Seu grande dia começa aqui
+          Inspire-se nas noivas que confiaram em nosso cuidado para o dia mais especial de suas vidas. Cada detalhe pensado para refletir sua beleza e tornar seu momento único. Seu grande dia começa aqui.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -72,10 +64,7 @@ const GallerySection = () => {
             <div key={noivaIndex} className="relative overflow-hidden group bg-[#ffffff58cc] shadow-xl hover:shadow-2xl rounded-lg transition-all duration-800 ease-in-out">
               <div className="relative overflow-hidden rounded-t-lg">
                 {/* Carrossel específico para cada noiva */}
-                <Slider
-                  {...sliderSettings}
-                  ref={(slider) => setSliderRef(noivaIndex, slider)} // Atribuindo a referência ao slider correspondente
-                >
+                <Slider {...sliderSettings}>
                   {noiva.images.map((image, idx) => (
                     <div key={idx} className="w-full h-auto flex justify-center items-center">
                       <img
@@ -90,24 +79,6 @@ const GallerySection = () => {
                     </div>
                   ))}
                 </Slider>
-
-                {/* Setas de navegação personalizadas */}
-                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 flex justify-between w-full px-4">
-                  <button
-                    className="text-[#ffffffc9] text-xl transition-transform transform hover:scale-110 hover:border-[#ffffff58] hover:text-[#b7b7b7e4] focus:outline-none focus:ring-white focus:ring-opacity-50 p-3"
-                    onClick={() => sliderRefs.current[noivaIndex].slickPrev()}
-                    aria-label="Ir para o slide anterior"
-                  >
-                    &#10094; {/* Seta para a esquerda */}
-                  </button>
-                  <button
-                    className="text-[#ffffffc9] text-xl transition-transform transform hover:scale-110 hover:border-[#ffffff58] hover:text-[#ffffffe4] focus:outline-none focus:ring-white focus:ring-opacity-50 p-3"
-                    onClick={() => sliderRefs.current[noivaIndex].slickNext()}
-                    aria-label="Ir para o próximo slide"
-                  >
-                    &#10095; {/* Seta para a direita */}
-                  </button>
-                </div>
               </div>
               <div className="p-6 text-center">
                 <p className="text-lg lg:text-xl font-medium text-[#000000c3] leading-relaxed">
