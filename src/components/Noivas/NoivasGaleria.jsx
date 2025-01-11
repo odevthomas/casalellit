@@ -100,7 +100,7 @@ const NoivasGaleria = () => {
   }, []);
 
   return (
-    <section id="servicos" className="py-20 bg-[#f6eee3bb] text-white" aria-labelledby="services-section">
+    <section id="noivasgaleria" className="py-20 bg-[#f6eee3bb] text-white" aria-labelledby="services-section">
       <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <h2 className="text-4xl font-heading text-[#4f2909] mb-6">

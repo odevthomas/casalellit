@@ -1,10 +1,15 @@
 import React from "react";
 
 const HistoriaETradicao = () => {
-
+ const handleClick = () => {
+    const phoneNumber = "5519998917724"; // Substitua pelo seu número de WhatsApp
+    const message = "Olá! Vim pelo site e gostaria de agendar um horário 🥰"; // Mensagem pré-definida
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank"); // Abre o WhatsApp em uma nova aba
+  };
   
   return (
-    <section
+    <section id="HistoriaETradicao"
       className="relative py-20 w-full h-screen bg-cover bg-center bg-fixed flex items-center"
       style={{
         backgroundImage: 'url("/CasaLelit/ambiente-piscina1-casa-lellit-campinas.webp")',
@@ -32,12 +37,14 @@ const HistoriaETradicao = () => {
           Nosso espaço é sofisticado, acolhedor e pensado para que você se sinta verdadeiramente em casa. Contamos com uma equipe apaixonada e produtos de altíssima qualidade para garantir resultados incríveis e que respeitam a sua essência. Na Casa Lellit, você é o centro de tudo.
         </p>
 
-        <a
-                href="https://api.whatsapp.com/send/?phone=5519998917724&text=Olá!+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+a+Casa+L%27Ellit!&type=phone_number&app_absent=0"
-                className="bg-[#5f3717] text-white hover:bg-[#211006] font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-colors duration-300 text-sm sm:text-base"
-            >
+         {/* Botão de agendamento */}
+        <button
+          aria-label="Clique para agendar serviços de beleza"
+          className="bg-[#7b5643] text-white font-bold py-4 px-10 rounded-lg shadow-xl transition-all duration-300 hover:scale-110 hover:bg-[#211006] hover:shadow-2xl"
+          onClick={handleClick}
+        >
                 Saber mais sobre a Casa L'Ellit!
-            </a>
+        </button>
       </div>
     </section>
   );

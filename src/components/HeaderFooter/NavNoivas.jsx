@@ -8,10 +8,11 @@ import { FaBars, FaTimes } from "react-icons/fa"; // Importando os ícones de ha
 import logo from "/logo.png";
 
 const navigation = [
-      { title: "Nossos Serviços", path: "#servicos" },
+  { title: "Sobre a Casa", path: "/casalellit" },
+  { title: "Seu Dia de Noiva", path: "#dia-da-noiva" },
+  { title: "Galeria  ", path: "#noivasgaleria" },
+  
 
-  { title: "Sobre a Casa", path: "#HistoriaETradicao" },
-  { title: "Dia de Noivas", path: "/noivas" },
 
 ];
 

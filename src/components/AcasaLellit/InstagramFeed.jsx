@@ -108,14 +108,7 @@ const InstagramFeed = () => {
 
             <div className="mt-6 flex justify-center space-x-6">
               {/* Botão Seguir */}
-              <button
-                onClick={handleFollow}
-                className={`px-8 py-3 rounded-lg text-white font-semibold text-sm transition-colors ${isFollowing ? 'bg-gray-400' : 'bg-[#7d6759] hover:bg-[#5b4237]'} ${isFollowingInProgress ? 'opacity-50 cursor-not-allowed' : ''}`}
-                disabled={isFollowingInProgress} // Desabilita o botão enquanto está em processo
-              >
-                {isFollowingInProgress ? 'Seguindo...' : isFollowing ? 'Seguindo' : 'Seguir'}
-              </button>
-
+  
               {/* Botão Visitar Instagram */}
               <a
                 href="https://www.instagram.com/casalellit/"

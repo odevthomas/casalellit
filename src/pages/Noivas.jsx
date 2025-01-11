@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; // Importando useState
 import Footer from '../components/HeaderFooter/Footer';
 import NoivasGaleria from '../components/Noivas/NoivasGaleria';
-import Navbar from '../components/HeaderFooter/Navbar';
+import Navbar from '../components/HeaderFooter/NavNoivas';
 import TabelaDeServicos from '../components/Noivas/TabelaDeServicos';
 import DiaDaNoivaSection from '../components/Noivas/DiaDaNoivaSection';
 import NoivaSection from '../components/Noivas/NoivaSection';
