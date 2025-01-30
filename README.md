@@ -15,7 +15,7 @@
 
 ## Visão Geral
 
-O site da Casa L'Ellit é uma aplicação web moderna desenvolvida para um salão de beleza localizado em Cambuci, São Paulo. O objetivo é fornecer informações sobre serviços, facilitar agendamentos e criar uma presença digital forte.
+O site da Casa L'Ellit é uma aplicação web moderna desenvolvida para um salão de beleza localizado em Campinas , São Paulo. O objetivo é fornecer informações sobre serviços, facilitar agendamentos e criar uma presença digital forte.
 
 ## Configuração do Projeto
 
