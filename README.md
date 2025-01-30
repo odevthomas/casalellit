@@ -167,11 +167,5 @@ Projeto licenciado sob MIT License.
 4. Push para a branch (`git push origin feature/nova-feature`)
 5. Abra um Pull Request
 
-## Contato
 
-**Casa L'Ellit**
-- Email: contato@casalellit.com.br
-- Telefone: (11) 0000-0000
-- Localização: Cambuci, São Paulo
-
-Desenvolvido com ❤️ por [Seu Nome/Empresa]
+Desenvolvido com ❤️ por [Thomas Eduardo ]
